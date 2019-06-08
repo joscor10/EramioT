@@ -12,6 +12,7 @@
 */
 Route::resource('menu','MenuController');
 Route::resource('front','FrontController');
+Route::resource('prueba','ProductoController');
 
 
 
