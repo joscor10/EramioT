@@ -64,12 +64,8 @@ class LoginController extends Controller
      */
     public function salir()
     {
-       Auth::logout();
-       //Session:flash('message-error','Datos incorrectos');
-        //return Redirect::to('/');
-        $productos= Producto::all();
-         $usuario =Auth::user();
-        return view('layouts.index',compact('productos','usuario'));
+        Auth::logout();
+        return redirect('/');
     }
 
     /**

@@ -41,6 +41,8 @@ Route::get('/','FrontController@index');
 //Route::get('admin','FrontController@admin');
 Route::resource('producto','ProductoController');
 Route::resource('usuario','UsuarioController');
+
+Route::get('logout','LoginController@salir')->name('login.logout');
 Route::resource('login','LoginController');
 
 Route::get('prueba', function() {

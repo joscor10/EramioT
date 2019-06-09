@@ -16,8 +16,8 @@ class FrontController extends Controller
     public function index()
     {
          $productos= Producto::all();
-         $usuario =Auth::user();
-         return view('layouts.index',compact('productos','usuario'));
+         $usuario = Auth::user();
+         return view('index',compact('productos','usuario'));
     }
 
 
