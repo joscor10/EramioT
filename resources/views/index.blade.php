@@ -15,21 +15,10 @@
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Shadows+Into+Light&display=swap" rel="stylesheet">
 
     <style type="text/css">
-        .mySlides {
-            display: none
-        }
-
-        .w3-left, .w3-right, .w3-badge {
-            cursor: pointer
-        }
-
-        .w3-badge {
-            height: 13px;
-            width: 13px;
-            padding: 0
-        }
-
-        body {
+        .mySlides {display:none}
+        .w3-left, .w3-right, .w3-badge {cursor:pointer}
+        .w3-badge {height:13px;width:13px;padding:0}
+        body{
 
             font-family: 'Shadows Into Light', cursive;
 
@@ -41,26 +30,22 @@
             box-shadow: none !important;
             border-color: #e3e3e3;
         }
-
         .form-control:focus {
             border-color: #6797FE;
         }
-
         .form-control, .btn {
             border-radius: 2px;
         }
-
         .login-form {
             width: 390px;
             margin: 0 auto;
             padding: 10px 0 0px;
-            position: absolute;
-            left: 40%;
+            position: absolute
+            left:40%;
             top: 38%;
 
         }
-
-        .modal-content {
+        .modal-content  {
             color: #7a7a7a;
             border-radius: 2px;
             width: 450px;
@@ -72,12 +57,10 @@
             padding: 10px;
             position: absolute;
         }
-
         .login-form h2 {
             font-size: 22px;
             margin: 35px 0 25px;
         }
-
         .login-form .avatar {
             position: absolute;
             margin: 0 auto;
@@ -92,15 +75,12 @@
             padding: 15px;
             box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
         }
-
         .login-form .avatar img {
             width: 100%;
         }
-
         .login-form input[type="checkbox"] {
             margin-top: 2px;
         }
-
         .login-form .btn {
             font-size: 16px;
             font-weight: bold;
@@ -108,30 +88,24 @@
             border: none;
             margin-bottom: 20px;
         }
-
         .login-form .btn:hover, .login-form .btn:focus {
             background: #6797FE;
             outline: none !important;
         }
-
         .login-form a {
             color: #000;
             text-decoration: underline;
         }
-
         .login-form a:hover {
             text-decoration: none;
         }
-
-        .modal-content a {
+        .modal-content  a {
             color: #7a7a7a;
             text-decoration: none;
         }
-
-        .modal-content a:hover {
+        .modal-content  a:hover {
             text-decoration: underline;
         }
-
         .ec-stars-wrapper {
             /* Espacio entre los inline-block (los hijos, los `a`)
                http://ksesocss.blogspot.com/2012/03/display-inline-block-y-sus-empeno-en.html */
@@ -142,7 +116,6 @@
                 también se esté haciendo hover a alguna estrella */
             display: inline-block;
         }
-
         .ec-stars-wrapper a {
             text-decoration: none;
             display: inline-block;
@@ -156,7 +129,6 @@
         .ec-stars-wrapper:hover a {
             color: rgb(39, 130, 228);
         }
-
         /*
          * El selector de hijo, es necesario para aumentar la especifidad
          */
@@ -164,16 +136,8 @@
             color: #888;
         }
 
-        /*  menu mujer */
-        /*.mujer:hover ~  #menu_mujer{
-           display:block;
 
 
-           position: absolute;
-
-
-
-       }*/
         .menu_mujer {
 
 
@@ -246,6 +210,153 @@
             opacity: .4;
         }
 
+/*---------------hombre-------------------*/
+        .menu_hombre {
+
+
+            display: none;
+            z-index: 100;
+
+
+        }
+
+
+
+        .calzado-hombre:hover .text-calzado2 {
+
+
+            position: absolute;
+            top: 25%;
+            left: 20%;
+
+
+        }
+
+
+        .calzado-hombre:hover .img-calzado2 {
+
+            opacity: .4;
+        }
+
+
+        .accesorios-hombre:hover .text-accesorios2 {
+            position: absolute;
+            top: 25%;
+            left: 12%;
+
+            text-align: center;
+
+
+        }
+
+
+        .accesorios-hombre:hover .img-accesorios2 {
+
+            opacity: .4;
+        }
+
+
+        .ropa-hombre:hover .text-ropa2 {
+            position: absolute;
+            top: 25%;
+            left: 28%;
+
+
+        }
+
+
+        .ropa-hombre:hover .img-ropa2 {
+
+            opacity: .4;
+        }
+
+
+        .todo-hombre:hover .text-todo2 {
+            position: absolute;
+            top: 25%;
+            left: 28%;
+
+
+        }
+
+
+        .todo-hombre:hover .img-todo2 {
+
+            opacity: .4;
+        }
+        /*---------------niño-------------------*/
+        .menu_niño {
+
+
+            display: none;
+            z-index: 100;
+
+
+        }
+
+
+        .calzado-niño:hover .text-calzado3 {
+
+
+            position: absolute;
+            top: 25%;
+            left: 20%;
+
+
+        }
+
+
+        .calzado-niño:hover .img-calzado3 {
+
+            opacity: .4;
+        }
+
+
+        .accesorios-niño:hover .text-accesorios3 {
+            position: absolute;
+            top: 25%;
+            left: 12%;
+
+            text-align: center;
+
+
+        }
+
+
+        .accesorios-niño:hover .img-accesorios3 {
+
+            opacity: .4;
+        }
+
+
+        .ropa-niño:hover .text-ropa3 {
+            position: absolute;
+            top: 25%;
+            left: 28%;
+
+
+        }
+
+
+        .ropa-niño:hover .img-ropa3 {
+
+            opacity: .4;
+        }
+
+
+        .todo-niño:hover .text-todo3 {
+            position: absolute;
+            top: 25%;
+            left: 28%;
+
+
+        }
+
+
+        .todo-niño:hover .img-todo3 {
+
+            opacity: .4;
+        }
 
     </style>
 
@@ -652,7 +763,7 @@
     <!--------------------------------------------------------------------------------------------------------->
     <!-------------------------submenus------------------------------------------------------------------------->
 
-    <div class="row dl-horizontal justify-content-center menu_mujer" style="background-color: #EAEAEA " id="">
+    <div class="row dl-horizontal justify-content-center menu_mujer" style="background-color: #EAEAEA " >
 
         <div class="col-sm-2 calzado-mujer mt-3 text-center border-dark  border-left ">
 
@@ -706,48 +817,129 @@
 
     </div>
 
-
     <!------------------------------------------------------------------------------------------------------------>
+    <!-------------------------------------------------Submenu Hombre------------------------------------------------------------------->
 
 
-<!--<div id="menu_mujer" class="row " style="">
-									           
-									            		<div class=" col-2 calzado-mujer border-bottom border-left border-right  text-center" >{!!HTML::image('img/calzado-mujer.jpg', null, array('class'=>'img-calzado','width' => '200px', 'height' => '220px'))!!}
+
+    <div class=" row dl-horizontal justify-content-center menu_hombre" style="background-color: #EAEAEA ">
+
+        <div class="col-sm-2 calzado-hombre mt-3 text-center border-dark  border-left ">
 
 
-        <h1 class="text-calzado text-center"><a class="nav-link" href="{!!URL::to('Calzado_Mujer')!!}">Calzado</a></h1>
-
-									            		</div>
-									            		<div  class="col-2 accesorios-mujer  border-bottom border-right text-center">
-									            			{!!HTML::image('img/accesorios-mujer.jpg', null, array('class'=>'img-accesorios','width' => '200px', 'height' => '220px'))!!}
-
-        <h1 class="text-accesorios "><a class="nav-link" href="{!!URL::to('Accesorios_Mujer')!!}">Accesorios</a></h1>
-									            		</div>
-
-									            		<div  class=" col- 2 ropa-mujer  border-bottom border-right  text-center">
-									            			{!!HTML::image('img/ropa1.jpg', null, array('class'=>'img-ropa','width' => '200px', 'height' => '220px'))!!}
-
-        <h1 class="text-ropa "><a class="nav-link" href="{!!URL::to('Ropa_Mujer')!!}">Ropa</a></h1>
-									            			
+            {!!HTML::image('img/calzado-hombre.jpg', null, array('class'=>'img-calzado2','width' => '200px', 'height' => '220px'))!!}
 
 
-									            		</div>
-									            		<div  class=" col-2 todo-mujer  border-bottom border-right text-center">
 
-									            			{!!HTML::image('img/todo1.jpg', null, array('class'=>'img-todo','width' => '200px', 'height' => '220px'))!!}
+            <h1 class="text-calzado2 " style="font-family: 'Shadows Into Light', cursive; font-size: 45px;">
 
-        <h1 class="text-todo "><a class="nav-link" href="{!!URL::to('mujeres')!!}">Todo</a></h1>
-									            			
+                <a class="nav-link" href="{!!URL::to('Calzado_Hombre')!!}">Calzado</a>
+            </h1>
+
+        </div>
 
 
-									            		</div>
+        <div class="col-sm-2 accesorios-hombre mt-3 text-center border-dark  border-left border-right ">
 
-									            	
-									            	
 
-	  </div>-->
+                {!!HTML::image('img/accesorios-hombre.jpg', null, array('class'=>'img-accesorios2','width' => '200px', 'height' => '220px'))!!}
+
+                <h1 class="text-accesorios2 " style="font-family: 'Shadows Into Light', cursive; font-size: 45px;">
+
+                    <a class="nav-link" href="{!!URL::to('Accesorios_Hombre')!!}">Accesorios</a>
+                </h1>
+        </div>
+
+
+        <div class="col-sm-2 ropa-hombre mt-3 text-center border-dark  border-right ">
+
+                {!!HTML::image('img/ropa2.jpg', null, array('class'=>'img-ropa2','width' => '200px', 'height' => '220px'))!!}
+
+                <h1 class="text-ropa2 "  style="font-family: 'Shadows Into Light', cursive; font-size: 45px;">
+                    <a class="nav-link" href="{!!URL::to('Ropa_Hombre')!!}">Ropa</a>
+
+                </h1>
+
+
+
+        </div>
+
+        <div class="col-sm-2 todo-hombre mt-3 text-center border-dark  border-right ">
+
+
+                {!!HTML::image('img/todo2.jpg', null, array('class'=>'img-todo2','width' => '200px', 'height' => '220px'))!!}
+
+                <h1 class="text-todo2 " style="font-family: 'Shadows Into Light', cursive; font-size: 45px;">
+                    <a class="nav-link" href="{!!URL::to('hombres')!!}">Todo</a>
+                </h1>
+
+
+        </div>
+
+
+
+
+    </div>
+
 
     <!---------------------------------------------------------------------------------------------------------------------------------------->
+    <!-------------------------------------------------Submenu Niño------------------------------------------------------------------->
+
+
+
+    <div class=" row dl-horizontal justify-content-center menu_niño" style="background-color: #EAEAEA ">
+
+
+        <div class="col-sm-2 calzado-niño mt-3 text-center border-dark  border-left ">
+
+                {!!HTML::image('img/calzado-niño.jpg', null, array('class'=>'img-calzado3','width' => '200px', 'height' => '220px'))!!}
+
+
+
+                <h1 class="text-calzado3" style="font-family: 'Shadows Into Light', cursive; font-size: 45px;">
+                    <a class="nav-link" href="{!!URL::to('Calzado_Niño')!!}">Calzado</a>
+                </h1>
+
+        </div>
+
+        <div class="col-sm-2 accesorios-niño mt-3 text-center border-dark  border-left border-right ">
+
+                {!!HTML::image('img/accesorios-niño.jpg', null, array('class'=>'img-accesorios3','width' => '200px', 'height' => '220px'))!!}
+
+                <h1 class="text-accesorios3 " style="font-family: 'Shadows Into Light', cursive; font-size: 45px;">
+                    <a class="nav-link" href="{!!URL::to('Accesorios_Niño')!!}">Accesorios</a>
+                </h1>
+        </div>
+
+        <div class="col-sm-2 ropa-niño mt-3 text-center border-dark  border-right ">
+
+
+                {!!HTML::image('img/ropa3.jpg', null, array('class'=>'img-ropa3','width' => '200px', 'height' => '220px'))!!}
+
+                <h1 class="text-ropa3 " style="font-family: 'Shadows Into Light', cursive; font-size: 45px;">
+                    <a class="nav-link" href="{!!URL::to('Ropa_Niño')!!}">Ropa</a>
+                </h1>
+
+
+
+        </div>
+
+        <div class="col-sm-2 todo-niño mt-3 text-center border-dark border-right ">
+
+
+                {!!HTML::image('img/todo3.jpg', null, array('class'=>'img-todo3','width' => '200px', 'height' => '220px'))!!}
+
+                <h1 class="text-todo3 " style="font-family: 'Shadows Into Light', cursive; font-size: 45px;">
+                    <a class="nav-link" href="{!!URL::to('niños')!!}">Todo</a></h1>
+
+
+
+        </div>
+
+
+
+
+    </div>
 
     <!----------------------------------------------------contenido----------------------------------------------------->
 
@@ -824,35 +1016,117 @@
         x[myIndex - 1].style.display = "block";
         setTimeout(carousel, 4000); // Change image every 2 seconds
     }
-</script>
 
 
-<script>
-
-
+/*-------------------hover mujer---------------------------- */
     $(".mujer").hover(function () {
         $(".menu_mujer").css("display", "flex");
         $(".menu_mujer").css("position", "absolute");
         $(".menu_mujer").css("width", "100%");
         $(".menu_mujer").css(" z-index", "1000");
 
-        $(this).css("background-color", "#F5D4DF");
+        /*$(this).css("background-color", "#F5D4DF");*/
 
     }, function () {
         $(".menu_mujer").css("display", "none");
-        $(this).css("background-color", "transparent");
+       /* $(this).css("background-color", "transparent");*/
 
 
     });
 
     $(".menu_mujer").hover(function () {
-        $(this).css("display", "block");
+        $(".menu_mujer").css("display", "flex");
+        $(".menu_mujer").css("position", "absolute");
+        $(".menu_mujer").css("width", "100%");
+        $(".menu_mujer").css(" z-index", "1000");
+
+       /* $(this).css("background-color", "#F5D4DF");*/
+
     }, function () {
-        $(this).css("display", "none");
+        $(".menu_mujer").css("display", "none");
+
     });
 
 
+    /*-------------------hover hombre---------------------------- */
+
+
+    $(".hombre").hover(function () {
+        $(".menu_hombre").css("display", "flex");
+        $(".menu_hombre").css("position", "absolute");
+        $(".menu_hombre").css("width", "100%");
+        $(".menu_hombre").css(" z-index", "1000");
+
+       /* $(this).css("background-color", "#F5D4DF");*/
+
+    }, function () {
+        $(".menu_hombre").css("display", "none");
+        $(this).css("background-color", "transparent");
+
+
+    });
+
+    $(".menu_hombre").hover(function () {
+        $(".menu_hombre").css("display", "flex");
+        $(".menu_hombre").css("position", "absolute");
+        $(".menu_hombre").css("width", "100%");
+        $(".menu_hombre").css(" z-index", "1000");
+
+       /* $(this).css("background-color", "#F5D4DF");*/
+
+    }, function () {
+        $(".menu_hombre").css("display", "none");
+
+    });
+
+    /*-------------------------------------------------- */
+
+
+    /*-------------------hover hombre---------------------------- */
+
+
+    $(".niño").hover(function () {
+        $(".menu_niño").css("display", "flex");
+        $(".menu_niño").css("position", "absolute");
+        $(".menu_niño").css("width", "100%");
+        $(".menu_niño").css(" z-index", "1000");
+
+        /* $(this).css("background-color", "#F5D4DF");*/
+
+    }, function () {
+        $(".menu_niño").css("display", "none");
+        $(this).css("background-color", "transparent");
+
+
+    });
+
+    $(".menu_niño").hover(function () {
+        $(".menu_niño").css("display", "flex");
+        $(".menu_niño").css("position", "absolute");
+        $(".menu_niño").css("width", "100%");
+        $(".menu_niño").css(" z-index", "1000");
+
+        /* $(this).css("background-color", "#F5D4DF");*/
+
+    }, function () {
+        $(".menu_niño").css("display", "none");
+
+    });
+
+    /*-------------------------------------------------- */
+
+
     $(".inicio").hover(function () {
+
+        $(this).css("background-color", "#F5D4DF");
+
+
+    }, function () {
+
+        $(this).css("background-color", "transparent");
+    });
+
+    $(".mujer").hover(function () {
 
         $(this).css("background-color", "#F5D4DF");
 
