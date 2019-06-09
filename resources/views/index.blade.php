@@ -15,9 +15,6 @@
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Shadows+Into+Light&display=swap" rel="stylesheet">
 
     <style type="text/css">
-
-        <
-        style >
         .mySlides {
             display: none
         }
@@ -57,7 +54,7 @@
             width: 390px;
             margin: 0 auto;
             padding: 10px 0 0px;
-            position: absolute
+            position: absolute;
             left: 40%;
             top: 38%;
 
@@ -576,7 +573,7 @@
 
                         </li>
 
-                        <li class="nav-item  mujer ">
+                        <li class="nav-item mujer ">
 
                             <a class="nav-link  pl-5 pr-5 " href="" style=" font-size: 25px;  color:#000000;"><i
                                         class="fas fa-female"></i> Mujeres</a>
@@ -834,13 +831,12 @@
 
 
     $(".mujer").hover(function () {
-        $(".menu_mujer").css("display", "block");
-        //$(".menu_mujer").css("position", "absolute");
-
-        $(".menu_mujer").css(" z-index", "100");
+        $(".menu_mujer").css("display", "flex");
+        $(".menu_mujer").css("position", "absolute");
+        $(".menu_mujer").css("width", "100%");
+        $(".menu_mujer").css(" z-index", "1000");
 
         $(this).css("background-color", "#F5D4DF");
-
 
     }, function () {
         $(".menu_mujer").css("display", "none");

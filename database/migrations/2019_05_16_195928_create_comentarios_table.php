@@ -13,7 +13,7 @@ class CreateComentariosTable extends Migration
      */
     public function up()
     {
-        Schema::table('comentarios', function (Blueprint $table) {
+        Schema::create('comentarios', function (Blueprint $table) {
              $table->bigIncrements('id');
             $table->string('comentario');
             $table->unsignedBigInteger('usuario_id');
@@ -32,8 +32,6 @@ class CreateComentariosTable extends Migration
      */
     public function down()
     {
-        Schema::table('comentarios', function (Blueprint $table) {
-            //
-        });
+        Schema::drop('comentarios');
     }
 }
