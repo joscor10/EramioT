@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 
-@section('contenido')
+@section('contenido2')
     <div class="container-fluid">
 
 @if(Session::has('message'))

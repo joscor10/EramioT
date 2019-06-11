@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 
-@section('contenido')
+@section('contenido2')
  <div class="row">
     	@if(count($errors)>0)
             <div class="alert alert-danger alert-dismissible" role="alert">
@@ -16,7 +16,8 @@
               </ul>
             </div>
         @endif
-             <h1 class="label ">Crear producto</h1>
+
+      <h1 class="label pl-3" style="font-family: 'Shadows Into Light', cursive; font-size: 40px;">Crear producto</h1>
 
    </div>
 
@@ -24,61 +25,70 @@
             <div class="col-md-7">
     		{!!Form::open(['route'=>'producto.store','method'=>'POST','enctype'=>'multipart/form-data'])!!}
     		  <div class="form-group">
-    		  	{!!Form::label('Nombre:')!!}
+
+                  <label class="col-form-label" style="font-size: 30px;">Nombre</label>
     		  	{!!Form::text('nombre',null,['class'=>'form-control form-control-sm ml-0 w-100','placeholder'=>'Ingrese nombre de producto'])!!}
 
     		  </div>
 
     		   <div class="form-group">
-    		  	{!!Form::label('Talla:')!!}
+                   <label class="col-form-label" style="font-size: 30px;">Talla</label>
+
     		  	{!!Form::text('talla',null,['class'=>'form-control form-control-sm ml-0 w-100','placeholder'=>'Ingrese talla de producto'])!!}
 
     		  </div>
 
     		  <div class="form-group">
-    		  	{!!Form::label('Precio:')!!}
+
+                  <label class="col-form-label" style="font-size: 30px;">Precio</label>
     		  	{!!Form::text('precio',null,['class'=>'form-control form-control-sm ml-0 w-100','placeholder'=>'Ingrese precio de producto'])!!}
 
               </div>
                  <div class="form-group">
-                {!!Form::label('Precio Venta:')!!}
+
+                     <label class="col-form-label" style="font-size: 30px;">Precio Venta</label>
                 {!!Form::text('precio_venta',null,['class'=>'form-control form-control-sm ml-0 w-100','placeholder'=>'Ingrese precio de venta de producto'])!!}
 
               </div>
 
                  <div class="form-group">
-                {!!Form::label('Estado:')!!}
+
+                     <label class="col-form-label" style="font-size: 30px;">Estado</label>
                 {!!Form::text('estado',null,['class'=>'form-control form-control-sm ml-0 w-100','placeholder'=>'Ingrese estado de producto'])!!}
 
               </div>
 
                 <div class="form-group">
-                {!!Form::label('Descripción corta:')!!}
+
+                    <label class="col-form-label" style="font-size: 30px;">Descripción Corta</label>
                 {!!Form::text('descripcion_corta',null,['class'=>'form-control form-control-sm ml-0 w-100','placeholder'=>'Ingrese descripción de producto'])!!}
 
               </div>
 
     		  <div class="form-group">
-    		  	{!!Form::label('Descripción larga:')!!}
+
+                  <label class="col-form-label" style="font-size: 30px;">Descripción Larga</label>
     		  	{!!Form::text('descripcion_larga',null,['class'=>'form-control form-control-sm ml-0 w-100','placeholder'=>'Ingrese descripción de producto'])!!}
 
     		  </div>
 
    
     		  <div class="form-group">
-    		  	{!!Form::label('Categoria:')!!}
+
+                  <label class="col-form-label" style="font-size: 30px;">Categoria</label>
                 {!!Form::select('categoria_id',$categorias,null,['class'=>'form-control form-control-sm ml-0 w-100','placeholder'=>'Ingrese categoria de producto'])!!}
     		  	<!--{!!Form::text('categoria_id',null,['class'=>'form-control form-control-sm ml-0 w-50','placeholder'=>'Ingrese categoria de producto'])!!}-->
 
     		  </div>
 
     		   <div class="form-group">
-    		  	{!!Form::label('Genero:')!!}
+                   <label class="col-form-label" style="font-size: 30px;">Genero</label>
+
     		  	{!!Form::select('genero_id',$generos,null,['class'=>'form-control form-control-sm ml-0 w-100','placeholder'=>'Ingrese genero de producto'])!!}
 
     		  </div>
 
-              <h2>Imagenes</h2>
+                <label class="col-form-label" style="font-size: 30px;">Imagenes</label>
            
 
 
