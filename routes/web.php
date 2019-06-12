@@ -22,6 +22,9 @@ Route::get('Calzado_Mujer','MenuController@Calzado_Mujer');
 Route::get('Accesorios_Mujer','MenuController@Accesorios_Mujer');
 Route::get('Ropa_Mujer','MenuController@Ropa_Mujer');
 
+Route::get('admin','FrontController@admin');
+
+
 
 
 Route::get('hombres','MenuController@Hombres');

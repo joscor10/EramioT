@@ -28,7 +28,7 @@
                         {{$usuario->usuario}}
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a href="{{route('front.show', 1)}}" class="dropdown-item ml-0 w-100">Administrar</a>
+                        <a href="{{url('admin')}}" class="dropdown-item ml-0 w-100">Administrar</a>
                         <a href="{{route('login.logout')}}" class="dropdown-item ml-0 w-100">Salir</a>
                     </div>
                 </div>

@@ -61,7 +61,7 @@ class FrontController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function admin()
     {
         //
 
@@ -78,9 +78,9 @@ class FrontController extends Controller
      */
     public function edit($id)
     {
-        $producto=Producto::find($id);
+        $productos=Producto::find($id);
         $usuario =Auth::user();
-         return view('producto.view',compact('producto','usuario'));
+         return view("producto.view",compact('productos','usuario'));
     }
 
     /**

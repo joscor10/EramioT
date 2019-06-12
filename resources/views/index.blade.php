@@ -78,7 +78,7 @@
 
                                     </div>
 
-                                <!--<a href="{!!URL::to('producto/view')!!} class="btn" style=" width: 230px; background-color: #F7D8FE">Comprar</a>-->
+
 
                                     {!!link_to_route('front.edit',$title='Comprar',$parameters=$producto->id,$attributes=['class'=>'btn','style'=>'width: 230px; background-color: #F7D8FE; font-size:20px;'])!!}
                                 </div>
