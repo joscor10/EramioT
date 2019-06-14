@@ -96,6 +96,30 @@ class FrontController extends Controller
     }
 
 
+    public function info()
+    {
+
+        $usuario =Auth::user();
+        return view("info.quees",compact('usuario'));
+
+    }
+
+    public function terminos()
+    {
+
+        $usuario =Auth::user();
+        return view("info.terminos",compact('usuario'));
+
+    }
+
+    public function historia()
+    {
+
+        $usuario =Auth::user();
+        return view("info.historia",compact('usuario'));
+
+    }
+
    /**
      * Update the specified resource in storage.
      *
