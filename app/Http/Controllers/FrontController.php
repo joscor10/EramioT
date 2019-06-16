@@ -17,7 +17,7 @@ class FrontController extends Controller
     {
          $productos= Producto::all();
          $usuario = Auth::user();
-         return view('index',compact('productos','usuario'));
+         return view('home.index',compact('productos','usuario'));
     }
 
 

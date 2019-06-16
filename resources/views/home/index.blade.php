@@ -140,10 +140,11 @@
 
         <div class="col-2">
 
-
         </div>
-
-
     </div>
 
 @endsection
+
+@push('scripts')
+    @include('home.carousel')
+@endpush
