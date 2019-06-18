@@ -63,7 +63,7 @@
 
 @include('layouts.front.partials.scripts')
 
-@stack('scripts')
 
+@stack('scripts')
 </body>
 </html>

@@ -20,7 +20,7 @@ class CreateUsuariosTable extends Migration
             $table->string('usuario');
             $table->string('identificacion');
             $table->string('email');
-            $table->string('contrasena');
+            $table->string('password');
             $table->integer('tipo');
         });
     }
