@@ -2,12 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Comentario;
-use App\Producto;
-use Auth;
+use App\Imagen;
 use Illuminate\Http\Request;
 
-class ComentarioController extends Controller
+class ImageneController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -37,23 +35,16 @@ class ComentarioController extends Controller
      */
     public function store(Request $request)
     {
-        Comentario::create([
-            'comentario'=>$request["comentario"],
-            'producto_id'=>$request["producto"],
-            'usuario_id'=>Auth::user()->id ]);
-
-        $cadena='/front/'.$request["producto"].'/edit';
-
-        return redirect($cadena);
+        //
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Comentario  $comentario
+     * @param  \App\Imagen  $imagen
      * @return \Illuminate\Http\Response
      */
-    public function show(Comentario $comentario)
+    public function show(Imagen $imagen)
     {
         //
     }
@@ -61,10 +52,10 @@ class ComentarioController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Comentario  $comentario
+     * @param  \App\Imagen  $imagen
      * @return \Illuminate\Http\Response
      */
-    public function edit(Comentario $comentario)
+    public function edit(Imagen $imagen)
     {
         //
     }
@@ -73,10 +64,10 @@ class ComentarioController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Comentario  $comentario
+     * @param  \App\Imagen  $imagen
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Comentario $comentario)
+    public function update(Request $request, Imagen $imagen)
     {
         //
     }
@@ -84,10 +75,10 @@ class ComentarioController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Comentario  $comentario
+     * @param  \App\Imagen  $imagen
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Comentario $comentario)
+    public function destroy(Imagen $imagen)
     {
         //
     }

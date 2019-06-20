@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Imagen;
 use Illuminate\Http\Request;
 Use App\Producto;
 use App\Categoria;
@@ -21,6 +22,7 @@ class ProductoController extends Controller
     {
 
         $productos= Producto::where('usuario_id',Auth::user()->id)->paginate(4);
+
          $categorias= Categoria::pluck('nombre','id');
        $generos= Genero::pluck('nombre','id');
         $usuario =Auth::user();
@@ -53,14 +55,14 @@ class ProductoController extends Controller
         $name='';
 
 
-        if($request->hasFile('imagen')){
+       /* if($request->hasFile('imagen')) {
+
             $file=$request->file('imagen');
             $name =time().$file->getClientOriginalName();
             $file->move(public_path().'/imagenes/',$name);
+        }*/
 
-
-        }
-         Producto::create([
+        $producto= Producto::create([
              'nombre'=>$request["nombre"],
              'talla'=>$request["talla"],
              'precio'=>$request['precio'],
@@ -75,6 +77,27 @@ class ProductoController extends Controller
         
             
         ]);
+
+
+         foreach ($request->file('imagen') as $imagen){
+
+           //  $file=$request->file($imagen);
+             $name =time().$imagen->getClientOriginalName();
+             $imagen->move(public_path().'/imagenes/',$name);
+
+             Imagen::create([
+                 'nombre'=>$name,
+                 'producto_id'=>$producto->id
+
+             ]);
+         }
+
+
+
+
+
+
+
        Session::flash('message','Producto Creado Correctamente');
 
         return redirect('/producto');

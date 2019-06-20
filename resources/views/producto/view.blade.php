@@ -45,29 +45,38 @@
 
 
 	<ul class="list-unstyled pl-5 mt-3 w-75">
-		<li class="media">
-			<img src="..." class="mr-3" alt="...">
-			<div class="media-body">
-				<h5 class="mt-0 mb-1">List-based media object</h5>
-				Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-			</div>
-		</li>
-
+		@foreach($comentarios as $comentario)
+			<li class="media border-bottom mt-3">
+				<img src="..." class="mr-3" alt="...">
+				<div class="media-body">
+					<h5 class="mt-0 mb-1" style="font-family: 'Shadows Into Light', cursive; font-size: 30px;">{{$comentario->user->usuario}}</h5>
+					<p>{{$comentario->comentario}}</p>
+				</div>
+			</li>
+		@endforeach
 	</ul>
 
+	@auth
 	<ul class="list-unstyled w-75 pl-5 mt-3">
-		<li class="media w-100">
+		<form action="{{route('comentario.store')}}" method="POST">
+			@csrf
+			@method('POST')
+		<li class="media w-100  ">
 			<img src="..." class="mr-3" alt="...">
 			<div class="media-body">
-				<h5 class="mt-0 mb-1">List-based media object</h5>
-				<textarea   class="form-control w-100" id="exampleFormControlTextarea1" rows="3"></textarea>
-				{!!link_to_route('front.update',$title='Comentar',$parameters=$productos->id,$attributes=['class'=>'btn mt-3','style'=>'width: 230px; background-color: #F7D8FE'])!!}
+				<h5 class="mt-0 mb-1" style="font-family: 'Shadows Into Light', cursive; font-size: 30px;">{{$usuario->usuario}}</h5>
+				<textarea name="comentario"  class="form-control w-100" id="exampleFormControlTextarea1" rows="3"></textarea>
+				<input  type="hidden" class="form-control" name="producto" value="{{$productos->id}}"/>
+				<button style="width: 230px; background-color: #F7D8FE" type="submit" class="btn mt-3">Comentar</button>
+
 			</div>
 
 		</li>
+		</form>
 
 
 	</ul>
+	@endauth
 
 
 </div>

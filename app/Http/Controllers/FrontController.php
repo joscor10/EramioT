@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Usuario;
 use Illuminate\Http\Request;
 Use App\Producto;
 use Auth;
+use App\Comentario;
 
 class FrontController extends Controller
 {
@@ -79,8 +81,11 @@ class FrontController extends Controller
     public function edit($id)
     {
         $productos=Producto::find($id);
+        $comentarios= Comentario::where('producto_id',$id)->get();
+        $user= Usuario::pluck('nombre','id');
         $usuario =Auth::user();
-         return view("producto.view",compact('productos','usuario'));
+
+         return view("producto.view",compact('productos','usuario','comentarios','user'));
     }
 
     /**

@@ -14,6 +14,7 @@ Route::resource('menu','MenuController');
 Route::resource('front','FrontController');
 Route::resource('pruebaModificada','ProductoController');
 Route::resource('otraPrueba','ProductoController');
+Route::resource('comentario','ComentarioController');
 
 
 

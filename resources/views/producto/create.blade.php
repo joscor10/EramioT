@@ -94,7 +94,7 @@
 
 
                     <div class="file-loading">
-                        <input id="input-40" name="imagen" type="file" class="file"> <!--multiple>-->
+                        <input id="input-40" name="imagen[]" type="file" class="file" multiple>
                     </div>
                     <br>
 
