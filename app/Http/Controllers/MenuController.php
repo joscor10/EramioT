@@ -14,7 +14,7 @@ class MenuController extends Controller
 
     	$productos= Producto::where('genero_id',1)->get();
          $usuario =Auth::user();
-        return view('layouts.index',compact('productos','usuario'));
+        return view('home.index',compact('productos','usuario'));
     }
 
 
@@ -22,7 +22,7 @@ class MenuController extends Controller
 
     	$productos= Producto::where('genero_id',2)->get();
          $usuario =Auth::user();
-        return view('layouts.index',compact('productos','usuario'));
+        return view('home..index',compact('productos','usuario'));
     }
 
 
@@ -30,13 +30,13 @@ class MenuController extends Controller
 
     	$productos= Producto::where('genero_id',3)->get();
          $usuario =Auth::user();
-        return view('layouts.index',compact('productos','usuario'));
+        return view('home..index',compact('productos','usuario'));
     }
 
     public function store(Request $request){
       $productos= Producto::where('nombre','like',"%{$request['buscar']}%")->get();
          $usuario =Auth::user();
-        return view('layouts.index',compact('productos','usuario'));
+        return view('home.index',compact('productos','usuario'));
         
 
     }
@@ -46,7 +46,7 @@ class MenuController extends Controller
 
     	$productos= Producto::where('genero_id',1)->where('categoria_id',1)->get();
          $usuario =Auth::user();
-        return view('layouts.index',compact('productos','usuario'));
+        return view('home.index',compact('productos','usuario'));
     }
 
 
@@ -55,7 +55,7 @@ class MenuController extends Controller
 
     	$productos= Producto::where('genero_id',1)->where('categoria_id',3)->get();
          $usuario =Auth::user();
-        return view('layouts.index',compact('productos','usuario'));
+        return view('home.index',compact('productos','usuario'));
     }
 
 
@@ -64,7 +64,7 @@ class MenuController extends Controller
 
     	$productos= Producto::where('genero_id',1)->where('categoria_id',2)->get();
          $usuario =Auth::user();
-        return view('layouts.index',compact('productos','usuario'));
+        return view('home.index',compact('productos','usuario'));
     }
 
 /* ---------------- hombres------------------ */
@@ -72,7 +72,7 @@ class MenuController extends Controller
 
     	$productos= Producto::where('genero_id',2)->where('categoria_id',1)->get();
          $usuario =Auth::user();
-        return view('layouts.index',compact('productos','usuario'));
+        return view('home.index',compact('productos','usuario'));
     }
 
 
@@ -81,7 +81,7 @@ class MenuController extends Controller
 
     	$productos= Producto::where('genero_id',2)->where('categoria_id',3)->get();
          $usuario =Auth::user();
-        return view('layouts.index',compact('productos','usuario'));
+        return view('home.index',compact('productos','usuario'));
     }
 
 
@@ -90,7 +90,7 @@ class MenuController extends Controller
 
     	$productos= Producto::where('genero_id',2)->where('categoria_id',2)->get();
          $usuario =Auth::user();
-        return view('layouts.index',compact('productos','usuario'));
+        return view('home.index',compact('productos','usuario'));
     }
 
 /*  ------------------ Nuños ----------- */
@@ -101,7 +101,7 @@ public function Calzado_Niño(){
 
     	$productos= Producto::where('genero_id',3)->where('categoria_id',1)->get();
          $usuario =Auth::user();
-        return view('layouts.index',compact('productos','usuario'));
+        return view('home.index',compact('productos','usuario'));
     }
 
 
@@ -110,7 +110,7 @@ public function Calzado_Niño(){
 
     	$productos= Producto::where('genero_id',3)->where('categoria_id',3)->get();
          $usuario =Auth::user();
-        return view('layouts.index',compact('productos','usuario'));
+        return view('home.index',compact('productos','usuario'));
     }
 
 
@@ -119,7 +119,7 @@ public function Calzado_Niño(){
 
     	$productos= Producto::where('genero_id',3)->where('categoria_id',2)->get();
          $usuario =Auth::user();
-        return view('layouts.index',compact('productos','usuario'));
+        return view('home.index',compact('productos','usuario'));
     }
 
 
