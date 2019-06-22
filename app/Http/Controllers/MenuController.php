@@ -44,7 +44,7 @@ class MenuController extends Controller
 
     public function Calzado_Mujer(){
 
-    	$productos= Producto::where('genero_id',1)->where('categoria_id',1)->get();
+    	$productos= Producto::with('imagenes')->where('genero_id',1)->where('categoria_id',1)->get();
          $usuario =Auth::user();
         return view('home.index',compact('productos','usuario'));
     }

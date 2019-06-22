@@ -81,13 +81,12 @@ class FrontController extends Controller
      */
     public function edit($id)
     {
-        $productos=Producto::find($id);
+        $productos=Producto::with('imagenes')->find($id);
         $comentarios= Comentario::where('producto_id',$id)->get();
         $user= Usuario::pluck('nombre','id');
         $usuario =Auth::user();
-        $imagenes= Imagen::where('producto_id',$id)->get();
 
-         return view("producto.view",compact('productos','usuario','comentarios','user','imagenes'));
+         return view("producto.view",compact('productos','usuario','comentarios','user'));
     }
 
     /**
