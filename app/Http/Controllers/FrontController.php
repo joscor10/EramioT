@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Imagen;
 use App\Usuario;
 use Illuminate\Http\Request;
 Use App\Producto;
@@ -84,8 +85,9 @@ class FrontController extends Controller
         $comentarios= Comentario::where('producto_id',$id)->get();
         $user= Usuario::pluck('nombre','id');
         $usuario =Auth::user();
+        $imagenes= Imagen::where('producto_id',$id)->get();
 
-         return view("producto.view",compact('productos','usuario','comentarios','user'));
+         return view("producto.view",compact('productos','usuario','comentarios','user','imagenes'));
     }
 
     /**

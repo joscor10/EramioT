@@ -4,8 +4,18 @@
 
 <div class="row  border ml-5 mt-5 mr-5">
 
-<div class="col-sm-1  border-right">
+<div class="col-sm-1  border-right text-center">
+<div class="ml-2">
 
+	@foreach($imagenes as $imagen)
+	  	<div class="row mt-5 align-content-center ">
+			<a class="btn-link" href="">
+			<img   style="height: 100px; width: 100px; " src="../../imagenes/{{$imagen->nombre}}" class=" rounded-circle  mx-auto d-block" alt="...">
+            </a>
+		</div>
+	@endforeach
+
+</div>
 
 
 </div>
