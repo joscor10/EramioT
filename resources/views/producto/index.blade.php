@@ -22,10 +22,10 @@
     	<div class="row">
 
 		    	<div class="col-ms">
-		    	<!--{!!link_to_route('producto.create',$title='Agregar',$attributes=['class'=>'btn btn-success'])!!}-->
-		    		<a class="btn btn-success" href="{!!URL::to('producto/create')!!}"><i class="fas fa-plus"></i> agregar</a>
-		    		
-		    	</div>	
+
+		    		<a class="btn " style="background-color: #EFA3BB" href="{!!URL::to('producto/create')!!}"><i class="fas fa-plus"></i> agregar</a>
+
+		    	</div>
 
     	</div>
         </br>
@@ -33,7 +33,7 @@
     	<div class="row">
     		<table class="table table-striped table-bordered">
 					  <thead>
-					    <tr>
+					    <tr style="font-size: 25px;">
 					      <th scope="col">Nombre</th>
 					      <th scope="col">Talla</th>
 					      <th scope="col">Descripción</th>
@@ -47,7 +47,7 @@
 					  </thead>
 					  @foreach($productos as $producto)
 					  <tbody>
-					    <tr>
+					    <tr style="font-size: 20px;" class="text-center text-ali">
 					      <td>{{$producto->nombre}}</td>
 					      <td>{{$producto->talla}}</td>
 					      <td>{{$producto->descripcion_corta}}</td>
@@ -57,11 +57,11 @@
 					      <td>{{$producto->categoria->nombre}}</td>
 					      <td>{{$producto->genero->nombre}}</td>
 					      <td>
-					      	{!!link_to_route('producto.edit',$title='editar',$parameters=$producto->id,$attributes=['class'=>'btn btn-secondary ml-0 w-100'])!!}
+					      	{!!link_to_route('producto.edit',$title='editar',$parameters=$producto->id,$attributes=['class'=>'btn  ml-0 w-100','style'=>'background-color: #EFA3BB'])!!}
 
     		{!!Form::open(['route'=>['producto.destroy',$producto->id],'method'=>'DELETE'])!!}
 
-    		{!!Form::submit('Eliminar',['class'=>'btn btn-danger ml-0 w-100'])!!}
+    		{!!Form::submit('Eliminar',['class'=>'btn  ml-0 mt-2 w-100','style'=>'background-color: #EFA3BB'])!!}
 
 
     		{!!Form::close()!!}

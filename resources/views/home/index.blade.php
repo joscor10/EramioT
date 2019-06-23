@@ -93,7 +93,7 @@
 
                         <div class="col-sm" style="padding-left: 50px;">
                             <div class="card" style="width: 18rem;">
-                                <img style="height: 200px; width: 200px; " src="imagenes/{{$producto->imagen}}"
+                                <img style="height: 200px; width: 200px; " src="imagenes/{{$producto->imagenes->first()['nombre']}}"
                                      class="card-img-top mx-auto d-block" alt="...">
 
                                 <div class="ec-stars-wrapper ">
@@ -122,7 +122,7 @@
 
 
 
-                                    {!!link_to_route('front.edit',$title='Comprar',$parameters=$producto->id,$attributes=['class'=>'btn','style'=>'width: 230px; background-color: #F7D8FE; font-size:20px;'])!!}
+                                    {!!link_to_route('front.edit',$title='Comprar',$parameters=$producto->id,$attributes=['class'=>'btn','style'=>'width: 230px; background-color: #EFA3BB; font-size:20px;'])!!}
                                 </div>
                             </div>
 

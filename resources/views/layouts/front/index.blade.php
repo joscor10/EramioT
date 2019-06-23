@@ -2,8 +2,9 @@
 <html lang="es">
 <head>
     <title>Era Mio - Trends Vintage</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-    <link rel="shortcut icon" href="img/icono.png"/>
+    <link rel="shortcut icon" href="../../img/icono.png"/>
 
     <link media="all" type="text/css" rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 

@@ -11,7 +11,7 @@
                             <img src="{{asset('img/icon-user.png')}}" alt="">
                         </div>
 
-                        <h1 class="text-center">Inicio de Sesión</h1>
+                        <h1 style="font-family: 'Shadows Into Light', cursive; "class="text-center">Inicio de Sesión</h1>
 
                         <div class="form-group">
                             <input type="text" class="form-control" name="email" placeholder="Usuario"
@@ -24,15 +24,15 @@
                         </div>
 
                         <div class="form-group">
-                            <button type="submit" class="btn btn-primary btn-lg btn-block">Ingresar</button>
+                            <button style="background-color: #EFA3BB; font-size: 20px; color: #000000;" type="submit" class="btn btn-primary btn-lg btn-block">Ingresar</button>
                         </div>
 
                         <div class="clearfix">
-                            <label class="pull-left checkbox-inline"><input type="checkbox"> Recuedame</label>
+                            <label  style="color: #000000; font-size: 20px;" class="pull-left checkbox-inline"><input type="checkbox"> Recuedame</label>
                             <br>
-                            <a href="#" class="pull-right">Olvidaste tu contraseña?</a>
+                            <a href="#"  style="color: #000000; font-size: 15px;" class="pull-right">Olvidaste tu contraseña?</a>
                         </div>
-                        <label class="text-center small">No tienes cuenta? </label><a data-dismiss="modal" class="link"
+                        <label style="color: #000000; font-size: 15px;" class="text-center small ">No tienes cuenta? </label><a  style="color: #000000;font-size: 15px;" data-dismiss="modal" class="link"
                                                                                       data-toggle="modal"
                                                                                       data-target="#registrar" href="">
                             Registrate!</a>

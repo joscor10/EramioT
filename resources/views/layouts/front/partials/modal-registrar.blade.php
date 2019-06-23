@@ -8,7 +8,7 @@
                         <img src="{{asset('img/icon-user.png')}}" alt="">
                     </div>
 
-                    <h1 class="text-center">Ingrese sus Datos</h1>
+                    <h1 style="font-family: 'Shadows Into Light', cursive; "class="text-center">Ingrese sus Datos</h1>
 
                     <form action="{{route('usuario.store')}}" method="POST">
                         @csrf
@@ -38,7 +38,7 @@
                                    required="required">
                         </div>
                         <div class="form-group">
-                            <button type="submit" class="btn btn-primary btn-lg btn-block">Registrar</button>
+                            <button style="background-color: #EFA3BB;" type="submit" class="btn btn-primary btn-lg btn-block">Registrar</button>
                         </div>
                     </form>
                 </div>

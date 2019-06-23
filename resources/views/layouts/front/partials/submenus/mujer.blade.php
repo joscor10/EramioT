@@ -5,7 +5,7 @@
 
         <h1 class="text-calzado " style="font-family: 'Shadows Into Light', cursive; font-size: 45px;">
 
-            <a class="nav-link" href="{{url('Calzado_Mujer')}}">Calzado</a>
+            <a class="nav-link text-secondary" href="{{url('Calzado_Mujer')}}">Calzado</a>
 
         </h1>
     </div>
@@ -16,7 +16,7 @@
 
         <h1 class="text-accesorios" style="font-family: 'Shadows Into Light', cursive; font-size: 45px;">
 
-            <a class="nav-link" href="{{url('Accesorios_Mujer')}}">Accesorios</a>
+            <a class="nav-link text-secondary" href="{{url('Accesorios_Mujer')}}">Accesorios</a>
 
         </h1>
 
@@ -29,7 +29,7 @@
 
         <h1 class="text-ropa " style="font-family: 'Shadows Into Light', cursive; font-size: 45px;">
 
-            <a class="nav-link" href="{{url('Ropa_Mujer')}}">Ropa</a>
+            <a class="nav-link text-secondary" href="{{url('Ropa_Mujer')}}">Ropa</a>
 
         </h1>
 
@@ -41,7 +41,7 @@
 
         <h1 class="text-todo " style="font-family: 'Shadows Into Light', cursive; font-size: 45px;">
 
-            <a class="nav-link" href="{{url('mujeres')}}">Todo</a>
+            <a class="nav-link text-secondary" href="{{url('mujeres')}}">Todo</a>
 
         </h1>
 

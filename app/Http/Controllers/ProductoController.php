@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Comentario;
 use App\Imagen;
 use Illuminate\Http\Request;
 Use App\Producto;
@@ -154,7 +155,10 @@ class ProductoController extends Controller
      */
     public function destroy($id)
     {
+        Comentario::where('producto_id',$id)->delete();
+        Imagen::where('producto_id',$id)->delete();
         Producto::destroy($id);
+
         Session::flash('message','Producto Eliminado Correctamente');
 
         return redirect('/producto');  

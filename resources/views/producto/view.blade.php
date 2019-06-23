@@ -18,8 +18,9 @@
     <div class="row border ml-5 mt-5 mr-5">
         <div class="col-sm-5">
             <div class="xzoom-container mt-3 mb">
-                <img class="xzoom img-responsive" id="xzoom-default" src="{{asset("imagenes/$productos->imagen")}}"
-                     xoriginal="{{asset("imagenes/$productos->imagen")}}" width="100%" height="500px"/>
+                <img class="xzoom img-responsive" id="xzoom-default" src="{{asset("imagenes/$imagen->nombre")}}"
+                     xoriginal="{{asset("imagenes/$imagen->nombre")}}" width="100%" height="500px"/>
+
                 <div class="xzoom-thumbs mt-1">
                     @foreach($productos->imagenes as $imagen)
                         <a href="{{asset("imagenes/$imagen->nombre")}}"><img class="xzoom-gallery" width="80"
@@ -46,7 +47,7 @@
             </div>
 
 
-            {!!link_to_route('front.update',$title='Comprar',$parameters=$productos->id,$attributes=['class'=>'btn','style'=>'width: 230px; background-color: #F7D8FE'])!!}
+            {!!link_to_route('front.update',$title='Comprar',$parameters=$productos->id,$attributes=['class'=>'btn','style'=>'width: 230px;background-color: #EFA3BB'])!!}
         </div>
 
 
@@ -88,7 +89,7 @@
                             <textarea name="comentario" class="form-control w-100" id="exampleFormControlTextarea1"
                                       rows="3"></textarea>
                             <input type="hidden" class="form-control" name="producto" value="{{$productos->id}}"/>
-                            <button style="width: 230px; background-color: #F7D8FE" type="submit" class="btn mt-3">
+                            <button style="width: 230px; background-color: #EFA3BB" type="submit" class="btn mt-3">
                                 Comentar
                             </button>
 
