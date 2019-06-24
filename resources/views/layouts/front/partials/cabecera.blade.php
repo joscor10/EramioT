@@ -7,8 +7,10 @@
         </br>
         <form action="{{route('menu.store')}}" method="POST"
               class="form-inline md-form form-sm active-cyan active-cyan-2 mt-2">
-            <input name="buscar" style="font-size: 22px" class="form-control form-control-sm ml-3 w-75" type="text"  placeholder="Buscar Producto" aria-label="Search" required="required">
-            <button style="background-color: transparent; border:0px; " class="nav-link" type="submit" style="font-size: 20px">
+            @csrf
+            @method('POST')
+            <input name="buscar" style="font-size: 22px" class="form-control form-control-sm ml-3 w-75" type="text"  placeholder="Buscar Producto" aria-label="Search" required="required"/>
+            <button style="background-color: transparent; border:0px; font-size: 20px" class="nav-link" type="submit">
                 <i class="fas fa-search" aria-hidden="true"></i>
             </button>
         </form>

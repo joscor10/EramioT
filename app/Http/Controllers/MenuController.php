@@ -8,7 +8,10 @@ use Auth;
 
 class MenuController extends Controller
 {
-    
+    public function index(){
+
+        return 'aqui';
+    }
 
     public function Mujeres(){
 
@@ -22,7 +25,7 @@ class MenuController extends Controller
 
     	$productos= Producto::where('genero_id',2)->get();
          $usuario =Auth::user();
-        return view('home..index',compact('productos','usuario'));
+        return view('home.index',compact('productos','usuario'));
     }
 
 
@@ -30,7 +33,7 @@ class MenuController extends Controller
 
     	$productos= Producto::where('genero_id',3)->get();
          $usuario =Auth::user();
-        return view('home..index',compact('productos','usuario'));
+        return view('home.index',compact('productos','usuario'));
     }
 
     public function store(Request $request){
