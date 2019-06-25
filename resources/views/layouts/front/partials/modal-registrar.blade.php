@@ -38,7 +38,7 @@
                                    required="required">
                         </div>
                         <div class="form-group">
-                            <button style="background-color: #EFA3BB;" type="submit" class="btn btn-primary btn-lg btn-block">Registrar</button>
+                            <button style="background-color: #EFA3BB; font-size: 20px; color: #000000;" type="submit" class="btn btn-primary btn-lg btn-block " >Registrar</button>
                         </div>
                     </form>
                 </div>

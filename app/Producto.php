@@ -9,7 +9,7 @@ class Producto extends Model
     public $timestamps = false;
     protected $table = "productos";
 
-    protected $fillable = ['nombre', 'talla', 'precio', 'descripcion_larga', 'descripcion_corta', 'estado', 'precio_venta', 'categoria_id', 'genero_id', 'imagen', 'usuario_id'];
+    protected $fillable = ['nombre', 'talla', 'precio', 'descripcion_larga', 'descripcion_corta', 'estado', 'precio_venta', 'categoria_id', 'genero_id', 'imagen', 'usuario_id','aprobado'];
 
 
     public function categoria()
@@ -20,6 +20,11 @@ class Producto extends Model
     public function genero()
     {
         return $this->hasOne(Genero::class, 'id', 'genero_id');
+    }
+
+    public function usuario()
+    {
+        return $this->hasOne(Usuario::class, 'id', 'usuario_id');
     }
 
     public function imagenes(){

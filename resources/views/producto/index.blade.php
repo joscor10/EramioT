@@ -15,7 +15,7 @@
 @endif
   <div class="row justify-content-center">
     		
-       <h1 class="label ">Productos</h1>
+       <h1 class="label " style="font-family: 'Shadows Into Light', cursive; ">Productos</h1>
 
     	</div>
 

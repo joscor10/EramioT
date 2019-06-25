@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Comentario;
 use App\Imagen;
+use App\Usuario;
 use Illuminate\Http\Request;
 Use App\Producto;
 use App\Categoria;
@@ -29,6 +30,48 @@ class ProductoController extends Controller
         $usuario =Auth::user();
          return view('producto.index',compact('productos','categorias','generos','usuario'));
          
+    }
+
+    public function aprobacion(){
+
+        $productos= Producto::where('aprobado',0)->paginate(7);
+
+        $categorias= Categoria::pluck('nombre','id');
+        $generos= Genero::pluck('nombre','id');
+        $usuario =Auth::user();
+        return view('producto.aprobacion',compact('productos','categorias','generos','usuario'));
+
+    }
+
+
+
+
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     * */
+    public function viewaprobacion($id)
+    {
+        $productos=Producto::with('imagenes')->find($id);
+        $imagen= Imagen::where('producto_id',$id)->get()->first();
+        $comentarios= Comentario::where('producto_id',$id)->get();
+        $user= Usuario::pluck('nombre','id');
+        $usuario =Auth::user();
+
+        return view("producto.viewaprobacion",compact('productos','usuario','comentarios','user','imagen'));
+    }
+
+    public function aprobar($id){
+
+        $producto=Producto::find($id);
+        $producto->aprobado=1;
+        $producto->save();
+        Session::flash('message','Producto Aprobado Correctamente');
+
+        return redirect('/aprobacion');
     }
 
     /**
@@ -74,7 +117,8 @@ class ProductoController extends Controller
              'categoria_id'=>$request['categoria_id'],
              'genero_id'=>$request['genero_id'],
              'imagen'=>$name,
-             'usuario_id'=>Auth::user()->id
+             'usuario_id'=>Auth::user()->id,
+              'aprobado'=>0
         
             
         ]);

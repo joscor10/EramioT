@@ -37,14 +37,14 @@
                 </div>
                 <div class="carousel-item">
 
-                    <img class="d-block w-100" src="img/img3.jpg" alt="..." width="100%" height="320">
+                    <img class="d-block w-100" src="img/img5.png" alt="..." width="100%" height="320">
                     <div class="carousel-caption d-none d-md-block">
                         <h5>Second slide label</h5>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100" src="img/img3.jpg" alt="..." width="100%" height="320">
+                    <img class="d-block w-100" src="img/img6.jpg" alt="..." width="100%" height="320">
                     <div class="carousel-caption d-none d-md-block">
                         <h5>Third slide label</h5>
                         <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
@@ -119,6 +119,7 @@
                                             <strike>${{number_format($producto->precio,2,",",".")}}</strike></p>
 
                                     </div>
+                                    <p class="card-text text-left"><i class="fas fa-store"></i> {{$producto->usuario->usuario}}</p>
 
 
 

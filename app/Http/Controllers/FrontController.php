@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Categoria;
+use App\Genero;
 use App\Imagen;
 use App\Usuario;
 use Illuminate\Http\Request;
@@ -18,18 +20,14 @@ class FrontController extends Controller
      */
     public function index()
     {
-         $productos= Producto::all();
+         $productos= Producto::where('aprobado',1)->get();
          $usuario = Auth::user();
          return view('home.index',compact('productos','usuario'));
     }
 
 
 
-   /*public function admin()
-    {
-        $usuario =Auth::user();
-        return view('layouts.admin');
-    }
+
 
     /**
      * Show the form for creating a new resource.
@@ -67,10 +65,14 @@ class FrontController extends Controller
     public function admin()
     {
         //
+        $productos= Producto::where('usuario_id',Auth::user()->id)->paginate(4);
+
+        $categorias= Categoria::pluck('nombre','id');
+        $generos= Genero::pluck('nombre','id');
 
          $usuario =Auth::user();
-         return view('layouts.admin',compact('usuario'));
-         // return Redirect::to('admin');
+         return view('producto.index',compact('usuario','productos','categorias','generos'));
+
     }
 
     /**

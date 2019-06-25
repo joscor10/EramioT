@@ -49,6 +49,13 @@ Route::resource('producto','ProductoController');
 Route::resource('usuario','UsuarioController');
 
 Route::get('logout','LoginController@salir')->name('login.logout');
+
+Route::get('aprobacion','ProductoController@aprobacion');
+
+
+Route::get('viewaprobacion/{id}','ProductoController@viewaprobacion')->name('producto.viewaprobacion');
+Route::get('aprobar/{id}','ProductoController@aprobar')->name('producto.aprobar');
+
 Route::resource('login','LoginController');
 
 Route::get('prueba', function() {
