@@ -30,9 +30,8 @@ class LoginController extends Controller
     public function create()
     {
          Auth::logout();
-       //Session:flash('message-error','Datos incorrectos');
-        //return Redirect::to('/');
-         $productos= Producto::all();
+
+        $productos= Producto::where('aprobado',1)->get();
          $usuario =Auth::user();
         return Redirect::to('/')->with(compact('productos','usuario'));
     }

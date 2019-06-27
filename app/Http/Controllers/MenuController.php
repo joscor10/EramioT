@@ -15,7 +15,7 @@ class MenuController extends Controller
 
     public function Mujeres(){
 
-    	$productos= Producto::where('genero_id',1)->get();
+    	$productos= Producto::where('aprobado',1)->where('genero_id',1)->get();
          $usuario =Auth::user();
         return view('home.index',compact('productos','usuario'));
     }
@@ -23,7 +23,7 @@ class MenuController extends Controller
 
       public function Hombres(){
 
-    	$productos= Producto::where('genero_id',2)->get();
+    	$productos= Producto::where('aprobado',1)->where('genero_id',2)->get();
          $usuario =Auth::user();
         return view('home.index',compact('productos','usuario'));
     }
@@ -31,7 +31,7 @@ class MenuController extends Controller
 
       public function Niños(){
 
-    	$productos= Producto::where('genero_id',3)->get();
+    	$productos=  Producto::where('aprobado',1)->where('genero_id',3)->get();
          $usuario =Auth::user();
         return view('home.index',compact('productos','usuario'));
     }
@@ -47,7 +47,7 @@ class MenuController extends Controller
 
     public function Calzado_Mujer(){
 
-    	$productos= Producto::with('imagenes')->where('genero_id',1)->where('categoria_id',1)->get();
+    	$productos= Producto::with('imagenes')->where('aprobado',1)->where('genero_id',1)->where('categoria_id',1)->get();
          $usuario =Auth::user();
         return view('home.index',compact('productos','usuario'));
     }
@@ -56,7 +56,7 @@ class MenuController extends Controller
 
      public function Accesorios_Mujer(){
 
-    	$productos= Producto::where('genero_id',1)->where('categoria_id',3)->get();
+    	$productos= Producto::where('aprobado',1)->where('genero_id',1)->where('categoria_id',3)->get();
          $usuario =Auth::user();
         return view('home.index',compact('productos','usuario'));
     }
@@ -65,7 +65,7 @@ class MenuController extends Controller
 
     public function Ropa_Mujer(){
 
-    	$productos= Producto::where('genero_id',1)->where('categoria_id',2)->get();
+    	$productos= Producto::where('aprobado',1)->where('genero_id',1)->where('categoria_id',2)->get();
          $usuario =Auth::user();
         return view('home.index',compact('productos','usuario'));
     }
@@ -73,7 +73,7 @@ class MenuController extends Controller
 /* ---------------- hombres------------------ */
     public function Calzado_Hombre(){
 
-    	$productos= Producto::where('genero_id',2)->where('categoria_id',1)->get();
+    	$productos= Producto::where('aprobado',1)->where('genero_id',2)->where('categoria_id',1)->get();
          $usuario =Auth::user();
         return view('home.index',compact('productos','usuario'));
     }
@@ -82,7 +82,7 @@ class MenuController extends Controller
 
      public function Accesorios_Hombre(){
 
-    	$productos= Producto::where('genero_id',2)->where('categoria_id',3)->get();
+    	$productos= Producto::where('aprobado',1)->where('genero_id',2)->where('categoria_id',3)->get();
          $usuario =Auth::user();
         return view('home.index',compact('productos','usuario'));
     }
@@ -91,7 +91,7 @@ class MenuController extends Controller
 
     public function Ropa_Hombre(){
 
-    	$productos= Producto::where('genero_id',2)->where('categoria_id',2)->get();
+    	$productos= Producto::where('aprobado',1)->where('genero_id',2)->where('categoria_id',2)->get();
          $usuario =Auth::user();
         return view('home.index',compact('productos','usuario'));
     }
@@ -102,7 +102,7 @@ class MenuController extends Controller
 
 public function Calzado_Niño(){
 
-    	$productos= Producto::where('genero_id',3)->where('categoria_id',1)->get();
+    	$productos= Producto::where('aprobado',1)->where('genero_id',3)->where('categoria_id',1)->get();
          $usuario =Auth::user();
         return view('home.index',compact('productos','usuario'));
     }
@@ -111,7 +111,7 @@ public function Calzado_Niño(){
 
      public function Accesorios_Niño(){
 
-    	$productos= Producto::where('genero_id',3)->where('categoria_id',3)->get();
+    	$productos= Producto::where('aprobado',1)->where('genero_id',3)->where('categoria_id',3)->get();
          $usuario =Auth::user();
         return view('home.index',compact('productos','usuario'));
     }
@@ -120,7 +120,7 @@ public function Calzado_Niño(){
 
     public function Ropa_Niño(){
 
-    	$productos= Producto::where('genero_id',3)->where('categoria_id',2)->get();
+    	$productos= Producto::where('aprobado',1)->where('genero_id',3)->where('categoria_id',2)->get();
          $usuario =Auth::user();
         return view('home.index',compact('productos','usuario'));
     }

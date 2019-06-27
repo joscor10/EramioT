@@ -5,7 +5,7 @@
 
 @if(Session::has('message'))
 
-<div class="alert alert-success alert-dismissible" role="alert">
+<div class="alert alert-secondary alert-dismissible" role="alert">
   <strong>{{Session::get('message')}}</strong>
   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
     <span aria-hidden="true">&times;</span>
@@ -31,7 +31,7 @@
         </br>
 
     	<div class="row">
-    		<table class="table table-striped table-bordered">
+    		<table class="table table-hover table-striped">
 					  <thead>
 					    <tr style="font-size: 25px;">
 					      <th scope="col">Nombre</th>
@@ -57,15 +57,16 @@
 					      <td>{{$producto->categoria->nombre}}</td>
 					      <td>{{$producto->genero->nombre}}</td>
 					      <td>
-					      	{!!link_to_route('producto.edit',$title='editar',$parameters=$producto->id,$attributes=['class'=>'btn  ml-0 w-100','style'=>'background-color: #EFA3BB'])!!}
 
-    		{!!Form::open(['route'=>['producto.destroy',$producto->id],'method'=>'DELETE'])!!}
+						{!!link_to_route('producto.edit',$title='editar',$parameters=$producto->id,$attributes=['class'=>'btn  ml-0 w-100','style'=>'background-color: #EFA3BB'])!!}
 
-    		{!!Form::submit('Eliminar',['class'=>'btn  ml-0 mt-2 w-100','style'=>'background-color: #EFA3BB'])!!}
+						{!!Form::open(['route'=>['producto.destroy',$producto->id],'method'=>'DELETE'])!!}
+
+						{!!Form::submit('Eliminar',['onclick'=>'return confirm("¿Esta seguro que desea eliminar este producto?")','class'=>'btn  ml-0 mt-2 w-100','style'=>'background-color: #EFA3BB'])!!}
 
 
-    		{!!Form::close()!!}
-					      <!--	<button class="btn btn-secondary"><i class="fas fa-pencil-alt"></i> Editar</button> <button class="btn btn-danger"><i class="fas fa-times"></i> Eliminar</button></td>-->
+						{!!Form::close()!!}
+
 					      
 
 					    </tr>

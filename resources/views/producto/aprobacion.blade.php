@@ -27,7 +27,7 @@
         </br>
 
         <div class="row">
-            <table class="table table-striped table-bordered">
+            <table class="table table-hover table-striped">
                 <thead>
                 <tr style="font-size: 25px;">
                     <th scope="col">Nombre</th>
@@ -39,6 +39,7 @@
                     <th scope="col">Usuario</th>
                     <th scope="col">Categoria</th>
                     <th scope="col">Genero</th>
+                    <th scope="col"></th>
                     <th scope="col">Acción</th>
                 </tr>
                 </thead>
@@ -54,6 +55,13 @@
                         <td>{{$producto->usuario->usuario}}</td>
                         <td>{{$producto->categoria->nombre}}</td>
                         <td>{{$producto->genero->nombre}}</td>
+
+                        @if ($producto->aprobado==0)
+                        <td>Sin Aprobar</td>
+                        @else
+                            <td>Aprobado</td>
+                        @endif
+
                         <td>
 
 

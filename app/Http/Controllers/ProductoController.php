@@ -34,7 +34,7 @@ class ProductoController extends Controller
 
     public function aprobacion(){
 
-        $productos= Producto::where('aprobado',0)->paginate(7);
+        $productos= Producto::where('aprobado',0)->orWhere('aprobado',1)->paginate(7);
 
         $categorias= Categoria::pluck('nombre','id');
         $generos= Genero::pluck('nombre','id');
