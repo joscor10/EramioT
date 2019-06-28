@@ -51,7 +51,7 @@
             @endguest
 
             @auth
-            {!!link_to_route('front.update',$title='Comprar',$parameters=$productos->id,$attributes=['class'=>'btn ','style'=>'font-size:30px; width: 230px;background-color: #EFA3BB'])!!}
+            {!!link_to_route('front.direccion',$title='Comprar',$parameters=$productos->id,$attributes=['class'=>'btn ','style'=>'font-size:30px; width: 230px;background-color: #EFA3BB'])!!}
                 @endauth
         </div>
 

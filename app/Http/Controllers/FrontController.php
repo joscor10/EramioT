@@ -75,12 +75,27 @@ class FrontController extends Controller
 
     }
 
+
+    public function direccion($id){
+
+
+        $usuario =Auth::user();
+        $generos= Genero::pluck('nombre','id');
+        $productos=Producto::with('imagenes')->find($id);
+        $imagen= Imagen::where('producto_id',$id)->get()->first();
+
+        return view('layouts.front.direccion',compact('usuario','generos','productos','imagen'));
+
+    }
+
     /**
      * Show the form for editing the specified resource.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+
+
     public function edit($id)
     {
         $productos=Producto::with('imagenes')->find($id);

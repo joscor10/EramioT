@@ -55,6 +55,7 @@ Route::get('aprobacion','ProductoController@aprobacion');
 
 Route::get('viewaprobacion/{id}','ProductoController@viewaprobacion')->name('producto.viewaprobacion');
 Route::get('aprobar/{id}','ProductoController@aprobar')->name('producto.aprobar');
+Route::get('direccion/{id}','FrontController@direccion')->name('front.direccion');
 
 Route::resource('login','LoginController');
 
