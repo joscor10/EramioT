@@ -76,6 +76,8 @@ class FrontController extends Controller
     }
 
 
+
+
     public function direccion($id){
 
 
@@ -127,6 +129,14 @@ class FrontController extends Controller
         return view("info.quees",compact('usuario'));
 
     }
+    public function quebuscamos()
+    {
+
+        $usuario =Auth::user();
+        return view("info.quebuscamos",compact('usuario'));
+
+    }
+
 
     public function terminos()
     {
@@ -143,6 +153,24 @@ class FrontController extends Controller
         return view("info.historia",compact('usuario'));
 
     }
+
+    public function  tienda(){
+        $usuario =Auth::user();
+        return view("info.tienda",compact('usuario'));
+
+    }
+
+    public function  vender(){
+        $usuario =Auth::user();
+        return view("info.vender",compact('usuario'));
+
+    }
+    public function  consignacion(){
+        $usuario =Auth::user();
+        return view("info.consignacion",compact('usuario'));
+
+    }
+
 
    /**
      * Update the specified resource in storage.

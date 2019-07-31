@@ -64,6 +64,15 @@ class ProductoController extends Controller
         return view("producto.viewaprobacion",compact('productos','usuario','comentarios','user','imagen'));
     }
 
+    public function verproductosusuario($id)
+    {
+        $productos= Producto::where('producto_id',$id)->get();
+
+        $usuario =Auth::user();
+
+        return view("producto.viewaprobacion",compact('productos','user'));
+    }
+
     public function aprobar($id){
 
         $producto=Producto::find($id);

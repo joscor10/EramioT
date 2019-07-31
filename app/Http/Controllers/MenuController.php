@@ -20,6 +20,15 @@ class MenuController extends Controller
         return view('home.index',compact('productos','usuario'));
     }
 
+    public function verproductosusuario($id)
+    {
+        $productos= Producto::where('usuario_id',$id)->get();
+
+        $usuario =Auth::user();
+
+        return view("home.index",compact('productos','usuario'));
+    }
+
 
       public function Hombres(){
 

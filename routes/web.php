@@ -25,8 +25,13 @@ Route::get('Ropa_Mujer','MenuController@Ropa_Mujer');
 
 Route::get('admin','FrontController@admin');
 route::get('info','frontController@info');
+route::get('quebuscamos','frontController@quebuscamos');
 route::get('terminos','frontController@terminos');
 route::get('historia','frontController@historia');
+route::get('tienda','frontController@tienda');
+route::get('vender','frontController@vender');
+route::get('consignacion','frontController@consignacion');
+
 
 
 
@@ -54,6 +59,8 @@ Route::get('aprobacion','ProductoController@aprobacion');
 
 
 Route::get('viewaprobacion/{id}','ProductoController@viewaprobacion')->name('producto.viewaprobacion');
+Route::get('verproductosusuario/{id}','MenuController@verproductosusuario')->name('verproductosusuario');
+
 Route::get('aprobar/{id}','ProductoController@aprobar')->name('producto.aprobar');
 Route::get('direccion/{id}','FrontController@direccion')->name('front.direccion');
 

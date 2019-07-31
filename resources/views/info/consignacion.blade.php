@@ -2,15 +2,10 @@
 @section('contenido')
     <div class="row-fluid text-left mt-5 ml-5 mr-5  pl-5 pr-5 ">
 
-
-
-
-
-
         <div class="text-center">
-        <h1 class="pt-5" style=" font-family: 'Shadows Into Light', cursive;"><strong>¿Qué es la Consignación y Como Funciona?</strong></h1>
+            <h1 class="pt-5" style=" font-family: 'Shadows Into Light', cursive;"><strong>¿Qué es la Consignación y Como Funciona?</strong></h1>
 
-        <img class="" src="{{asset('img/icono.png')}}" alt="" width="180px" height="80px">
+            <img class="" src="{{asset('img/icono.png')}}" alt="" width="180px" height="80px">
         </div>
 
 
@@ -170,9 +165,9 @@
         </div>
 
         <div class="text-center">
-        <h1 class="pt-5" style=" font-family: 'Shadows Into Light', cursive;"><strong>¿Cuánto Recibo por Dejar los Artículos en Consignación?</strong></h1>
+            <h1 class="pt-5" style=" font-family: 'Shadows Into Light', cursive;"><strong>¿Cuánto Recibo por Dejar los Artículos en Consignación?</strong></h1>
 
-        <img class="" src="{{asset('img/icono.png')}}" alt="" width="180px" height="80px">
+            <img class="" src="{{asset('img/icono.png')}}" alt="" width="180px" height="80px">
         </div>
 
         <p style="font-size: 25px;" class="pl-5 pr-5">
@@ -180,9 +175,9 @@
         </p>
 
         <div class="text-center">
-        <h1 class="pt-5" style=" font-family: 'Shadows Into Light', cursive;"><strong>¿Qué Pasa con los Artículos que no se Vendieron?</strong></h1>
+            <h1 class="pt-5" style=" font-family: 'Shadows Into Light', cursive;"><strong>¿Qué Pasa con los Artículos que no se Vendieron?</strong></h1>
 
-        <img class="" src="{{asset('img/icono.png')}}" alt="" width="180px" height="80px">
+            <img class="" src="{{asset('img/icono.png')}}" alt="" width="180px" height="80px">
         </div>
 
         <p style="font-size: 25px;" class="pl-5 pr-5">

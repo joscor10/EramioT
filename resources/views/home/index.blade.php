@@ -29,7 +29,7 @@
             </ol>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img class="d-block w-100" src="img/img3.jpg" alt="..." width="100%" height="320">
+                    <img class="d-block w-100" src="{{asset('img/img3.jpg')}}" alt="..." width="100%" height="320">
                     <div class="carousel-caption d-none d-md-block">
                         <h5>First slide label</h5>
                         <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
@@ -37,14 +37,14 @@
                 </div>
                 <div class="carousel-item">
 
-                    <img class="d-block w-100" src="img/img5.png" alt="..." width="100%" height="320">
+                    <img class="d-block w-100" src="{{asset('img/img5.png')}}" alt="..." width="100%" height="320">
                     <div class="carousel-caption d-none d-md-block">
                         <h5>Second slide label</h5>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100" src="img/img6.jpg" alt="..." width="100%" height="320">
+                    <img class="d-block w-100" src="{{asset('img/img6.jpg')}}" alt="..." width="100%" height="320">
                     <div class="carousel-caption d-none d-md-block">
                         <h5>Third slide label</h5>
                         <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
@@ -93,7 +93,7 @@
 
                         <div class="col-sm" style="padding-left: 50px;">
                             <div class="card" style="width: 18rem;">
-                                <img style="height: 200px; width: 200px; " src="imagenes/{{$producto->imagenes->first()['nombre']}}"
+                                <img style="height: 200px; width: 200px; " src="{{asset('imagenes/'.$producto->imagenes->first()['nombre'])}}"
                                      class="card-img-top mx-auto d-block" alt="...">
 
                                 <div class="ec-stars-wrapper ">
@@ -119,7 +119,8 @@
                                             <strike>${{number_format($producto->precio,2,",",".")}}</strike></p>
 
                                     </div>
-                                    <p class="card-text text-left"><i class="fas fa-store"></i> {{$producto->usuario->usuario}}</p>
+
+                                    <p class="card-text text-left"><a class="nav-link" href="{{url('verproductosusuario',['id'=>$producto->usuario->id])}}" style="color: #000000;"><i class="fas fa-store"></i> {{$producto->usuario->usuario}}</a></p>
 
 
 
